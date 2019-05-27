@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{B452AA03-E914-4B23-9665-F2A4AC89E358}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="zProject/Controllers/MainController.cs">
+    <Files>
+      <File FileName="zProject/Controllers/MainController.cs" Line="300" Column="26" />
+      <File FileName="zProject/Views/Main/Index.cshtml" Line="197" Column="1" />
+      <File FileName="zProject/Controllers/HomeController.cs" Line="48" Column="1" />
+      <File FileName="zProject/Views/Home/Index.cshtml" Line="19" Column="55" />
+      <File FileName="zProject/Helper/WebHelper.cs" Line="38" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="zProject" expanded="True">
+            <Node name="zProject" expanded="True">
+              <Node name="Controllers" expanded="True">
+                <Node name="MainController.cs" selected="True" />
+              </Node>
+              <Node name="Scripts" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Main" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.zProject PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

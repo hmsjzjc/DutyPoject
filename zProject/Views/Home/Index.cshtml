@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>职责树管理</title>
+
+    @*1、Jquery组件引用*@
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+
+    @*2、bootstrap组件引用*@
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/signin.css" rel="stylesheet">
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    
+
+</head>
+<body>
+    <div class="container">
+
+        <div class="container">
+
+            <form class="form-signin" target="nm_iframe">
+                <h2 class="form-signin-heading">请登录</h2>
+                <label for="phonenumber" class="sr-only">用户名</label>
+                <input type="text" id="phonenumber" class="form-control" placeholder="用户名" required autofocus>
+                <label for="pwd" class="sr-only">密码</label>
+                <input type="password" id="pwd" class="form-control" placeholder="密码" required>
+                <button class="btn btn-lg btn-primary btn-block" type="submit" id="login">登录</button>
+            </form>
+            @* form提交后不跳转 *@
+            <iframe name="nm_iframe" style="display:none;"></iframe>
+
+        </div> <!-- /container -->
+
+    </div> <!-- /container -->
+
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#login").click(function(){
+
+            var $phonenumber =$("#phonenumber").val();
+            var $pwd= $("#pwd").val();
+            $.ajax({
+                        dataType: "json",
+                        url: "/Home/LoginIn",
+                        type: "post",
+                        data: { phonenumber: $phonenumber, pwd: $pwd},
+                        success: function (result) {
+                            if (result == 0) {
+                                window.location.href="/Main";
+                            } else{
+                                alert(result);
+                            }
+                        },
+                        error: function () {
+                            alert("11未知错误，请重试！");
+                        }
+                    })
+
+        })
+    })
+    </script>
+</body>
+</html>
+
